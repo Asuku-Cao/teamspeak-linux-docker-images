@@ -2,8 +2,8 @@ FROM alpine:3.13
 
 RUN apk add --no-cache ca-certificates libstdc++ su-exec libpq
 RUN set -eux; \
-    addgroup -g 9988 ts3server; \
-    adduser -u 9988 -Hh /var/ts3server -G ts3server -s /sbin/nologin -D ts3server; \
+    addgroup -g 9987 ts3server; \
+    adduser -u 9987 -Hh /var/ts3server -G ts3server -s /sbin/nologin -D ts3server; \
     install -d -o ts3server -g ts3server -m 775 /var/ts3server /var/run/ts3server /opt/ts3server
 
 ENV PATH "${PATH}:/opt/ts3server"
